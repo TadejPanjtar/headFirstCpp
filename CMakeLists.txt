@@ -1,0 +1,6 @@
+project (DesignPatterns)
+cmake_minimum_required (VERSION 2.6)
+
+add_executable(1 1strategy/Tadej_test.cpp 1strategy/Tadej.cpp 1strategy/Tadej.h)
+add_executable(2 2observer/observer.cpp)
+add_executable(3 3decorator/decorator.cpp)
