@@ -30,6 +30,10 @@ Singleton* Singleton::getInstance() {
 		return pThis;
 }
 
+/* 
+ * SINGLETON PATTERN: ensures a class has only one instance, and provide a global point
+ * of access it.
+ */
 int main() {
 	std::cout << Singleton::getInstance()->message << std::endl;
 	
