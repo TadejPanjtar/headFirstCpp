@@ -202,6 +202,10 @@ Pizza* CaliforniaPizzaStore::createPizza(const string &type)
         return NULL;
     }
 }
+/**
+ * FACTORY METHOD: Define an interface for creating an object, but let subclasses decide
+ * which class to instantiate. Factory method lets a class defer instantiation to the subclasses.
+ */
 
 int main()
 {
