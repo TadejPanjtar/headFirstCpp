@@ -6,3 +6,6 @@ add_executable(2 2observer/observer.cpp)
 add_executable(3 3decorator/decorator.cpp)
 add_executable(4 4factory/factory.cpp)
 add_executable(5 5singleton/singleton.cpp)
+add_executable(6 6command/command.cpp)
+
+add_subdirectory(misc miscBin)

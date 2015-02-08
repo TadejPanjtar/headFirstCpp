@@ -42,6 +42,10 @@ void i( string& str) {
 template <typename T>
 T Maxi(T a, T b) { return a<b ? b : a; }
 
+/*
+ * STRATEGY defines a family of algorithms, encapsulates each one, and make them interchangeable.
+ * Strategy lets the algorithm vary independently from clients that use it.
+ */
 int main()
 {
 	vector<int> vec;
