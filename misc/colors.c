@@ -1,21 +1,40 @@
 #include <stdio.h>
 
-#define ANSI_COLOR_RED     "\x1b[31m"
-#define ANSI_COLOR_GREEN   "\x1b[32m"
-#define ANSI_COLOR_YELLOW  "\x1b[33m"
-#define ANSI_COLOR_BLUE    "\x1b[34m"
-#define ANSI_COLOR_MAGENTA "\x1b[35m"
-#define ANSI_COLOR_CYAN    "\x1b[36m"
-#define ANSI_COLOR_RESET   "\x1b[0m"
+#include "rlutil.h"  // http://stackoverflow.com/questions/7876241/portable-text-based-console-manipulator
+#ifdef _WIN32
+	void resetColors() {setColor(7);}
+#else
+	inline void resetColors() {printf("\x1b[0m");}
+#endif
 
 int main (int argc, char const *argv[]) {
 
-  printf(ANSI_COLOR_RED     "This text is RED!"     ANSI_COLOR_RESET "\n");
-  printf(ANSI_COLOR_GREEN   "This text is GREEN!"   ANSI_COLOR_RESET "\n");
-  printf(ANSI_COLOR_YELLOW  "This text is YELLOW!"  ANSI_COLOR_RESET "\n");
-  printf(ANSI_COLOR_BLUE    "This text is BLUE!"    ANSI_COLOR_RESET "\n");
-  printf(ANSI_COLOR_MAGENTA "This text is MAGENTA!" ANSI_COLOR_RESET "\n");
-  printf(ANSI_COLOR_CYAN    "This text is CYAN!"    ANSI_COLOR_RESET "\n");
-
-  return 0;
+/*
+	 0  BLACK - Black
+	 1  BLUE - Blue
+	 2  GREEN - Green
+	 3  CYAN - Cyan
+	 4  RED - Red
+	 5  MAGENTA - Magenta / purple
+	 6  BROWN - Brown / dark yellow
+	 7  GREY - Grey / dark white
+	 8  DARKGREY - Dark grey / light black
+	 9  LIGHTBLUE - Light blue
+	 10 LIGHTGREEN - Light green
+	 11 LIGHTCYAN - Light cyan
+	 12 LIGHTRED - Light red
+	 13 LIGHTMAGENTA - Light magenta / light purple
+	 14 YELLOW - Yellow (bright)
+	 15 WHITE - White (bright)
+ */
+	int i;
+//	cls();
+	for(i=0; i<16; i++) {
+		setColor(i);
+		puts("color");
+	}
+	setColor(GREEN); puts("Zelena");
+	setColor(LIGHTCYAN); puts("Cianova");
+	resetColors();
+	return 0;
 }

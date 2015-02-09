@@ -11,14 +11,13 @@ const char* toBin(unsigned char b) {
 }
 
 int main(int argc,char** argv) {
-	int i,n;
-	printf("%d\n", sizeof(int));
+	int i, *dyn;
+	unsigned char b1;
 
 	scanf ("%d",&i);
-
-	int *dyn = calloc(1000000, sizeof(int));
-	if (dyn ==NULL) exit (1); 
-	unsigned char b1=0x35;
+	dyn = calloc(1000000, sizeof(int));
+	if (dyn ==NULL) exit (1);
+	b1=0x35;
 	printf("binary of 0x%x is %s\n", b1, toBin(b1));
 	b1 &= ~(1 << 2);
 	printf("binary of 0x%x is %s\n", b1, toBin(b1));
