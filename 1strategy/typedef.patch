@@ -1,0 +1,26 @@
+diff --git a/1strategy/Tadej_test.cpp b/1strategy/Tadej_test.cpp
+index 47633bf..713492b 100644
+--- a/1strategy/Tadej_test.cpp
++++ b/1strategy/Tadej_test.cpp
+@@ -42,18 +42,19 @@ void i( string& str) {
+ template <typename T>
+ T Maxi(T a, T b) { return a<b ? b : a; }
+ 
++typedef vector<int> Vec;
+ /*
+  * STRATEGY defines a family of algorithms, encapsulates each one, and make them interchangeable.
+  * Strategy lets the algorithm vary independently from clients that use it.
+  */
+ int main()
+ {
+-	vector<int> vec;
++	Vec vec;
+ 	vec.push_back(12);
+ 	vec.push_back(334);
+ 
+ 	  cout << "vec contains:";
+-	  for (vector<int>::iterator it = vec.begin() ; it != vec.end(); ++it)
++	  for (Vec::iterator it = vec.begin() ; it != vec.end(); ++it)
+ 	    std::cout << ' ' << *it;
+ 	  cout << endl;
+ 
