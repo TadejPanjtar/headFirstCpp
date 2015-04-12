@@ -9,7 +9,7 @@ add_executable(5 5singleton/singleton.cpp)
 add_executable(6 6command/command.cpp)
 add_executable(7 7adapter/adapter.cpp)
 add_executable(8 8templateMethod/templateMethod.cpp)
-add_executable(9it 9itComp/iterator.cpp)
+add_executable(9it 9itComp/iteratorMain.cpp)
 add_executable(9comp 9itComp/component.cpp 9itComp/Iterator.h 9itComp/Iterator.cpp 9itComp/Menu.h 9itComp/Menu.cpp 9itComp/Waitress.h 9itComp/Waitress.cpp)
 add_executable(A Astate/State.cpp Astate/GumballMachine.cpp Astate/main.cpp Astate/State.h Astate/GumballMachine.h)
 
