@@ -1,11 +1,6 @@
 #include <stdio.h>
 
 #include "rlutil.h"  // http://stackoverflow.com/questions/7876241/portable-text-based-console-manipulator
-#ifdef _WIN32
-	void resetColors() {setColor(7);}
-#else
-	inline void resetColors() {printf("\x1b[0m");}
-#endif
 
 int main (int argc, char const *argv[]) {
 
@@ -35,6 +30,6 @@ int main (int argc, char const *argv[]) {
 	}
 	setColor(GREEN); puts("Zelena");
 	setColor(LIGHTCYAN); puts("Cianova");
-	resetColors();
+	resetColor();
 	return 0;
 }
